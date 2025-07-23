@@ -19,6 +19,7 @@
 #define BTN 5
 #define JS_x 27
 #define CHAN_JS_x 1
+#define LED 12
 /* END */
 
 /* MACROS MQTT */
@@ -50,8 +51,10 @@ void run_dns_lookup(MQTT_CLIENT_T *state);
 bool mqtt_connect(MQTT_CLIENT_T *state);
 err_t mqtt_publish_topic(MQTT_CLIENT_T *state, char *topic, char *message);
 
-static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
+void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
 void mqtt_pub_request_cb(void *arg, err_t err);
 void mqtt_sub_request_cb(void *arg, err_t err);
+void mqtt_pub_start_cb(void *arg, const char *topic, u32_t tot_len);
+void mqtt_pub_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags);
 
 /* END */

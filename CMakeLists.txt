@@ -38,8 +38,8 @@ add_compile_options(-Wall
 )
 
 if (PICO_CYW43_SUPPORTED) # set by BOARD=pico-w
-    set(WIFI_SSID "ALCL-9D58" CACHE INTERNAL "WiFi SSID")
-    set(WIFI_PASSWORD "8qrBANGLDu" CACHE INTERNAL "WiFi password")
+    set(WIFI_SSID "sssssss" CACHE INTERNAL "WiFi SSID")
+    set(WIFI_PASSWORD "ssssssss" CACHE INTERNAL "WiFi password")
     if (NOT TARGET pico_cyw43_arch)
         message("Skipping build as support is not available")
     else()
